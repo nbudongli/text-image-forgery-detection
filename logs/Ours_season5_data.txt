@@ -1,2 +1,4 @@
 threshold:0.35 current score is:0.146 f1 score is:0.094 iou score is:0.053 auc score is:0.5 
 threshold:0.35 current score is:0.118 f1 score is:0.077 iou score is:0.041 auc score is:0.5 
+threshold:0.35 current score is:0.045 f1 score is:0.03 iou score is:0.015 auc score is:0.382 
+threshold:0.35 current score is:0.118 f1 score is:0.077 iou score is:0.041 auc score is:0.501 

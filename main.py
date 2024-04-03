@@ -18,8 +18,7 @@ torch.backends.cudnn.enabled = False
 import shutil
 from models.rrumodel import Ringed_Res_Unet
 from models.mvsssnet import get_mvss
-from models.attentionmodel.f3net import F3Net
-
+from models.Tifdm import Tifdm
 from models.CFLNet import CFLNet
 import timm
 from models import denseFCN
@@ -31,7 +30,7 @@ import torch.nn.functional as F
 def create_model(params):
 
     if params=='Ours':
-        model = F3Net()
+        model = Tifdm() #Text image forgery detection model
     if params=='DFCN':
         model = denseFCN.normal_denseFCN(bn_in = 'bn')
     if params=='senet':
@@ -322,7 +321,7 @@ if __name__ == '__main__':
     params = {
         "model_name":'Ours',
         #指定当前模式为“train” 或者 “predict”
-        "mode":"predict", #"train" , train,predict 
+        "mode":"train", #"train" , train,predict 
         "lr": 0.0001,
         "batch_size": 4,
         "test_batch_size":4,
